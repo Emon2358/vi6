@@ -9,3 +9,4 @@ services:
     autoDeploy: true
     healthCheckPath: "/"   # 必要に応じてヘルスチェックのパスを変更してください
     port: 50021
+
