@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: voicevox
+    env: docker
+    plan: free    # ご利用のプランに合わせて変更してください
+    # ビルド前にVoicevoxの公式DockerfileをGitHubからダウンロード
+    buildCommand: curl -L https://raw.githubusercontent.com/voicevox/voicevox_engine/master/Dockerfile -o Dockerfile
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    healthCheckPath: "/"   # 必要に応じてヘルスチェックのパスを変更してください
+    port: 50021
